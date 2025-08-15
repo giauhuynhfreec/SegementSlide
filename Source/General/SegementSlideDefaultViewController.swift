@@ -7,6 +7,18 @@
 
 import UIKit
 
+let neutral0: UIColor = {
+    if #available(iOS 13.0, *) {
+        if UITraitCollection.current.userInterfaceStyle == .dark {
+            return UIColor(red: 18, green: 19, blue: 19, alpha: 1) // #121313
+        } else {
+            return UIColor(red: 255, green: 255, blue: 255, alpha: 1) // #FFFFFF
+        }
+    } else {
+        return .white
+    }
+}()
+
 open class SegementSlideDefaultViewController: SegementSlideViewController {
     
     private let defaultSwitcherView = SegementSlideDefaultSwitcherView()

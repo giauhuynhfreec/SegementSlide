@@ -60,7 +60,7 @@ public class SegementSlideContentView: UIView {
         }
         scrollView.constraintToSuperview()
         scrollView.delegate = self
-        scrollView.isScrollEnabled = true
+        scrollView.isScrollEnabled = false // true
         scrollView.isPagingEnabled = true
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.showsVerticalScrollIndicator = false
