@@ -48,7 +48,15 @@ open class TransparentSlideCustomViewController: TransparentSlideViewController 
     open var titlesInSwitcher: [String] {
         return []
     }
-    
+
+    open var iconsInSwitcher: [UIImage] {
+        return []
+    }
+
+    open var selectedIconsInSwitcher: [UIImage] {
+        return []
+    }
+
     open var badgesInSwitcher: [Int] {
         return []
     }
@@ -64,7 +72,15 @@ extension TransparentSlideCustomViewController: SegementSlideSwitcherDataSource 
     public var titles: [String] {
         return titlesInSwitcher
     }
-    
+
+    public var icons: [UIImage] {
+        return iconsInSwitcher
+    }
+
+    public var selectedIcons: [UIImage] {
+        return selectedIconsInSwitcher
+    }
+
 }
 
 extension TransparentSlideCustomViewController: JXSegmentedViewDelegate {

@@ -10,6 +10,8 @@ import UIKit
 public protocol SegementSlideSwitcherDataSource: class {
     var height: CGFloat { get }
     var titles: [String] { get }
+    var icons: [UIImage] { get }
+    var selectedIcons: [UIImage] { get }
 }
 
 public protocol SegementSlideSwitcherDelegate: UIView {

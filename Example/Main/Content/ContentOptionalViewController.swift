@@ -32,25 +32,25 @@ class ContentOptionalViewController: BaseTableViewController, SegementSlideConte
         tableView.tableHeaderView = noneView
         tableView.tableFooterView = noneView
         let refreshHeader = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(refreshAction))
-        refreshHeader?.lastUpdatedTimeLabel.isHidden = true
+        refreshHeader.lastUpdatedTimeLabel?.isHidden = true
         tableView.mj_header = refreshHeader
         tableView.mj_footer = MJRefreshAutoNormalFooter(refreshingTarget: self, refreshingAction: #selector(loadMoreAction))
-        tableView.mj_footer.isHidden = true
+        tableView.mj_footer?.isHidden = true
         DispatchQueue.main.async {
             let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
             hud.offset = CGPoint(x: 0, y: -self.view.bounds.height/5)
         }
-        tableView.mj_header.executeRefreshingCallback()
+        tableView.mj_header?.executeRefreshingCallback()
     }
     
     internal func refresh() {
-        tableView.mj_header.beginRefreshing()
+        tableView.mj_header?.beginRefreshing()
     }
     
     @objc
     private func refreshAction() {
-        if tableView.mj_footer.isRefreshing {
-            tableView.mj_footer.endRefreshing()
+        if ((tableView.mj_footer?.isRefreshing) != nil) {
+            tableView.mj_footer?.endRefreshing()
         }
         DispatchQueue.global().asyncAfter(deadline: .now()+Double.random(in: 0..<2)) {
             DispatchQueue.main.async { [weak self] in
@@ -59,9 +59,9 @@ class ContentOptionalViewController: BaseTableViewController, SegementSlideConte
                 }
                 self.languages.removeAll()
                 self.languages.append(contentsOf: DataManager.shared.randomLanguages)
-                self.tableView.mj_header.endRefreshing()
+                self.tableView.mj_header?.endRefreshing()
                 self.tableView.reloadData()
-                self.tableView.mj_footer.isHidden = false
+                self.tableView.mj_footer?.isHidden = false
                 MBProgressHUD.hide(for: self.view, animated: true)
                 self.refreshHandler?()
             }
@@ -70,8 +70,8 @@ class ContentOptionalViewController: BaseTableViewController, SegementSlideConte
     
     @objc
     private func loadMoreAction() {
-        guard !tableView.mj_header.isRefreshing else {
-            tableView.mj_footer.endRefreshing()
+        guard ((tableView.mj_header?.isRefreshing) == nil) else {
+            tableView.mj_footer?.endRefreshing()
             return
         }
         DispatchQueue.global().asyncAfter(deadline: .now()+Double.random(in: 0..<2)) {
@@ -80,7 +80,7 @@ class ContentOptionalViewController: BaseTableViewController, SegementSlideConte
                     return
                 }
                 self.languages.append(contentsOf: DataManager.shared.randomLanguages)
-                self.tableView.mj_footer.endRefreshing()
+                self.tableView.mj_footer?.endRefreshing()
                 self.tableView.reloadData()
             }
         }

@@ -33,7 +33,15 @@ open class SegementSlideDefaultViewController: SegementSlideViewController {
     open var titlesInSwitcher: [String] {
         return []
     }
-    
+
+    open var iconsInSwitcher: [UIImage] {
+        return []
+    }
+
+    open var selectedIconsInSwitcher: [UIImage] {
+        return []
+    }
+
     open func showBadgeInSwitcher(at index: Int) -> BadgeType {
         return .none
     }
@@ -54,7 +62,15 @@ extension SegementSlideDefaultViewController: SegementSlideSwitcherDataSource {
     public var titles: [String] {
         return titlesInSwitcher
     }
-    
+
+    public var icons: [UIImage] {
+        return iconsInSwitcher
+    }
+
+    public var selectedIcons: [UIImage] {
+        return selectedIconsInSwitcher
+    }
+
 }
 
 extension SegementSlideDefaultViewController: SegementSlideDefaultSwitcherViewDelegate {

@@ -92,7 +92,7 @@ class LanguageCenterViewController: BaseTransparentSlideDefaultViewController {
             guard let self = self else {
                 return
             }
-            self.scrollView.mj_header.endRefreshing()
+            self.scrollView.mj_header?.endRefreshing()
             self.badges[index] = BadgeType.random
             self.reloadBadgeInSwitcher()
         }
@@ -107,7 +107,7 @@ class LanguageCenterViewController: BaseTransparentSlideDefaultViewController {
         } else {
             topLayoutLength = topLayoutGuide.length
         }
-        scrollView.mj_header.ignoredScrollViewContentInsetTop = -topLayoutLength
+        scrollView.mj_header?.ignoredScrollViewContentInsetTop = -topLayoutLength
     }
     
     @objc
@@ -120,9 +120,9 @@ class LanguageCenterViewController: BaseTransparentSlideDefaultViewController {
         if isPresented {
             navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "close")!, style: .plain, target: self, action: #selector(backAction))
         }
-        let refreshHeader = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(refreshAction))!
-        refreshHeader.lastUpdatedTimeLabel.isHidden = true
-        refreshHeader.arrowView.image = nil
+        let refreshHeader = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(refreshAction))
+        refreshHeader.lastUpdatedTimeLabel?.isHidden = true
+        refreshHeader.arrowView?.image = nil
         refreshHeader.labelLeftInset = 0
         refreshHeader.activityIndicatorViewStyle = .white
         refreshHeader.setTitle("", for: .idle)
@@ -154,7 +154,7 @@ class LanguageCenterViewController: BaseTransparentSlideDefaultViewController {
     @objc
     private func refreshAction() {
         guard let contentViewController = currentSegementSlideContentViewController as? ContentViewController else {
-            scrollView.mj_header.endRefreshing()
+            scrollView.mj_header?.endRefreshing()
             return
         }
         contentViewController.refresh()

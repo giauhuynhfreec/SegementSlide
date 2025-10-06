@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3CA1059A2E9369AB00429102 /* IconSegementSlideDefaultSwitcherView+ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA105992E9369AB00429102 /* IconSegementSlideDefaultSwitcherView+ex.swift */; };
+		3CA1059B2E9369AB00429102 /* IconSegementSlideDefaultSwitcherView+ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA105992E9369AB00429102 /* IconSegementSlideDefaultSwitcherView+ex.swift */; };
+		3CE453792E8D2222004BA4F7 /* IconSegementSlideDefaultSwitcherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE453782E8D2222004BA4F7 /* IconSegementSlideDefaultSwitcherView.swift */; };
+		3CE4537A2E8D2222004BA4F7 /* IconSegementSlideDefaultSwitcherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE453782E8D2222004BA4F7 /* IconSegementSlideDefaultSwitcherView.swift */; };
+		3CE4537C2E8D22D0004BA4F7 /* IconSegementSlideDefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE4537B2E8D22D0004BA4F7 /* IconSegementSlideDefaultViewController.swift */; };
+		3CE4537D2E8D22D0004BA4F7 /* IconSegementSlideDefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE4537B2E8D22D0004BA4F7 /* IconSegementSlideDefaultViewController.swift */; };
 		801C121B250621510018BD64 /* SegementSlideSwitcherDataSourceWeakBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8031BF00250099AC0043F71B /* SegementSlideSwitcherDataSourceWeakBox.swift */; };
 		801C121C250621520018BD64 /* SegementSlideSwitcherDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8031BF01250099AC0043F71B /* SegementSlideSwitcherDelegate.swift */; };
 		801C121D250621520018BD64 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8031BF02250099AC0043F71B /* BadgeView.swift */; };
@@ -64,6 +70,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3CA105992E9369AB00429102 /* IconSegementSlideDefaultSwitcherView+ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IconSegementSlideDefaultSwitcherView+ex.swift"; sourceTree = "<group>"; };
+		3CE453782E8D2222004BA4F7 /* IconSegementSlideDefaultSwitcherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconSegementSlideDefaultSwitcherView.swift; sourceTree = "<group>"; };
+		3CE4537B2E8D22D0004BA4F7 /* IconSegementSlideDefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconSegementSlideDefaultViewController.swift; sourceTree = "<group>"; };
 		8031BF00250099AC0043F71B /* SegementSlideSwitcherDataSourceWeakBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegementSlideSwitcherDataSourceWeakBox.swift; sourceTree = "<group>"; };
 		8031BF01250099AC0043F71B /* SegementSlideSwitcherDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegementSlideSwitcherDelegate.swift; sourceTree = "<group>"; };
 		8031BF02250099AC0043F71B /* BadgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
@@ -134,12 +143,14 @@
 		8031BEFF250099AC0043F71B /* Switcher */ = {
 			isa = PBXGroup;
 			children = (
-				8031BF00250099AC0043F71B /* SegementSlideSwitcherDataSourceWeakBox.swift */,
-				8031BF01250099AC0043F71B /* SegementSlideSwitcherDelegate.swift */,
 				8031BF02250099AC0043F71B /* BadgeView.swift */,
-				8031BF03250099AC0043F71B /* SegementSlideDefaultSwitcherConfig.swift */,
 				8031BF04250099AC0043F71B /* SegementSlideDefaultSwitcherView.swift */,
 				8031BF05250099AC0043F71B /* SegementSlideDefaultSwitcherView+ex.swift */,
+				8031BF00250099AC0043F71B /* SegementSlideSwitcherDataSourceWeakBox.swift */,
+				8031BF01250099AC0043F71B /* SegementSlideSwitcherDelegate.swift */,
+				8031BF03250099AC0043F71B /* SegementSlideDefaultSwitcherConfig.swift */,
+				3CE453782E8D2222004BA4F7 /* IconSegementSlideDefaultSwitcherView.swift */,
+				3CA105992E9369AB00429102 /* IconSegementSlideDefaultSwitcherView+ex.swift */,
 			);
 			path = Switcher;
 			sourceTree = "<group>";
@@ -147,15 +158,16 @@
 		8031BF06250099AC0043F71B /* General */ = {
 			isa = PBXGroup;
 			children = (
-				8031BF07250099AC0043F71B /* TransparentSlideDefaultViewController.swift */,
+				8031BF0B250099AC0043F71B /* SegementSlideViewController.swift */,
 				8031BF08250099AC0043F71B /* SegementSlideViewController+setup.swift */,
 				8031BF09250099AC0043F71B /* SegementSlideViewController+scroll.swift */,
-				8031BF0A250099AC0043F71B /* SegementSlideScrollView.swift */,
-				8031BF0B250099AC0043F71B /* SegementSlideViewController.swift */,
 				8031BF0C250099AC0043F71B /* SegementSlideViewController+delegate.swift */,
-				8031BF0D250099AC0043F71B /* SegementSlideDefaultViewController.swift */,
-				8031BF0E250099AC0043F71B /* TransparentSlideViewController.swift */,
 				8031BF0F250099AC0043F71B /* SegementSlideViewController+ex.swift */,
+				8031BF0A250099AC0043F71B /* SegementSlideScrollView.swift */,
+				8031BF0E250099AC0043F71B /* TransparentSlideViewController.swift */,
+				8031BF07250099AC0043F71B /* TransparentSlideDefaultViewController.swift */,
+				8031BF0D250099AC0043F71B /* SegementSlideDefaultViewController.swift */,
+				3CE4537B2E8D22D0004BA4F7 /* IconSegementSlideDefaultViewController.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -364,6 +376,7 @@
 				8031BF1C250099AC0043F71B /* SegementSlideDefaultSwitcherView+ex.swift in Sources */,
 				8031BF20250099AC0043F71B /* SegementSlideScrollView.swift in Sources */,
 				8031BF29250099AC0043F71B /* String+Bounding.swift in Sources */,
+				3CE4537C2E8D22D0004BA4F7 /* IconSegementSlideDefaultViewController.swift in Sources */,
 				8031BF25250099AC0043F71B /* SegementSlideViewController+ex.swift in Sources */,
 				8031BF1A250099AC0043F71B /* SegementSlideDefaultSwitcherConfig.swift in Sources */,
 				8031BF27250099AC0043F71B /* SegementSlideHeaderView.swift in Sources */,
@@ -374,7 +387,9 @@
 				8031BF26250099AC0043F71B /* SegementSlideContentView.swift in Sources */,
 				8031BF1B250099AC0043F71B /* SegementSlideDefaultSwitcherView.swift in Sources */,
 				8031BF23250099AC0043F71B /* SegementSlideDefaultViewController.swift in Sources */,
+				3CE4537A2E8D2222004BA4F7 /* IconSegementSlideDefaultSwitcherView.swift in Sources */,
 				8031BF22250099AC0043F71B /* SegementSlideViewController+delegate.swift in Sources */,
+				3CA1059B2E9369AB00429102 /* IconSegementSlideDefaultSwitcherView+ex.swift in Sources */,
 				80C66AF4250E7E200084692E /* UIScrollView+Scroll.swift in Sources */,
 				8031BF18250099AC0043F71B /* SegementSlideSwitcherDelegate.swift in Sources */,
 				8031BF21250099AC0043F71B /* SegementSlideViewController.swift in Sources */,
@@ -391,6 +406,7 @@
 				801C121B250621510018BD64 /* SegementSlideSwitcherDataSourceWeakBox.swift in Sources */,
 				801C121C250621520018BD64 /* SegementSlideSwitcherDelegate.swift in Sources */,
 				801C121D250621520018BD64 /* BadgeView.swift in Sources */,
+				3CE4537D2E8D22D0004BA4F7 /* IconSegementSlideDefaultViewController.swift in Sources */,
 				801C121E250621520018BD64 /* SegementSlideDefaultSwitcherConfig.swift in Sources */,
 				801C121F250621520018BD64 /* SegementSlideDefaultSwitcherView.swift in Sources */,
 				801C1220250621520018BD64 /* SegementSlideDefaultSwitcherView+ex.swift in Sources */,
@@ -401,7 +417,9 @@
 				801C1225250621520018BD64 /* SegementSlideViewController.swift in Sources */,
 				801C1226250621520018BD64 /* SegementSlideViewController+delegate.swift in Sources */,
 				801C1227250621520018BD64 /* SegementSlideDefaultViewController.swift in Sources */,
+				3CE453792E8D2222004BA4F7 /* IconSegementSlideDefaultSwitcherView.swift in Sources */,
 				801C1228250621520018BD64 /* TransparentSlideViewController.swift in Sources */,
+				3CA1059A2E9369AB00429102 /* IconSegementSlideDefaultSwitcherView+ex.swift in Sources */,
 				80C66AF5250E7E430084692E /* UIScrollView+Scroll.swift in Sources */,
 				801C1229250621520018BD64 /* SegementSlideViewController+ex.swift in Sources */,
 				801C122A250621520018BD64 /* SegementSlideContentView.swift in Sources */,
